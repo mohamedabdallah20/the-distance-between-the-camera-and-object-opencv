@@ -97,9 +97,9 @@ while True:
 		dis = distance_to_camera(KNOWN_WIDTH,FOCAL_LENGTH,WIDTH_PERPIXEL)
 		print(dis)
 
-	cv2.putText(result, "chose the focal length and presss ESC ", (200, 20),
+	cv2.putText(img, "chose the focal length and presss ESC ", (200, 50),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-	cv2.putText(result, "{:.1f}".format(FOCAL_LENGTH), (230, 50),
+	cv2.putText(img, "{:.1f}".format(FOCAL_LENGTH), (230, 70),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
 	# cv2.imshow("frame" , result)
@@ -125,8 +125,10 @@ cv2.createTrackbar('V_Min', "trackBars2" , v_min,255,empty)
 cv2.createTrackbar('V_max', "trackBars2" , v_max,v_max,empty)
 # ------------------------------------------------------------------
 while True :
-	_ , img = cap.read()
-	img = imgscal(img,40)
+	# _ , img = cap.read()
+	# img = imgscal(img,40)
+	img = cv2.imread('img.jpg')
+	img = imgscal(img, 20)
 	imgHSV = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
 	hue_min= cv2.getTrackbarPos('Hue_Min', "trackBars2")
 	hue_max = cv2.getTrackbarPos('Hue_max', "trackBars2")
