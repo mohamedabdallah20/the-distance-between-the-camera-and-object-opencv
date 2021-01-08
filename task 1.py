@@ -34,7 +34,7 @@ cv2.createTrackbar('Hue_Min', "trackBars" , 0,255,empty)
 cv2.createTrackbar('Hue_max', "trackBars" , 151,151,empty)
 cv2.createTrackbar('S_Min', "trackBars" , 18,205,empty)
 cv2.createTrackbar('S_Max', "trackBars" , 135,135,empty)
-cv2.createTrackbar('V_Min', "trackBars" , 71,255,empty)
+cv2.createTrackbar('V_Min', "trackBars" , 142,255,empty)
 cv2.createTrackbar('V_max', "trackBars" , 255,255,empty)
 
 # --------find tallest edge/pixel to fit any rotate to an object-----
